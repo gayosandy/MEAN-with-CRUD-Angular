@@ -1,0 +1,39 @@
+{
+  "reservation": [
+    {
+      "firstName": "FIRST",
+      "lastName": "LAST",
+      "address": "tugas",
+      "city": "tanjay",
+      "zip": 6204,
+      "phoneNumber": 123,
+      "email": "aoe@alo",
+      "numNights": 5,
+      "numRooms": 5,
+      "numGuest": 5,
+      "catRates": [
+        "Superior - Single: $50/night",
+        "Superior - Double: $70/night"
+      ],
+      "arrivalDate": "2023-11-19T16:00:00.000Z",
+      "id": 4
+    },
+    {
+      "firstName": "TEST5",
+      "lastName": "TEST5",
+      "address": "5",
+      "city": "5",
+      "zip": 5,
+      "phoneNumber": 5,
+      "email": "5@GMAIL.COM",
+      "numNights": 5,
+      "numRooms": 5,
+      "numGuest": 5,
+      "catRates": [
+        "Superior - Single: $50/night"
+      ],
+      "arrivalDate": "2023-11-20T16:00:00.000Z",
+      "id": 5
+    }
+  ]
+}

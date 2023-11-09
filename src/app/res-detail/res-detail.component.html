@@ -1,0 +1,46 @@
+<div class="container" style="padding-top: 5%;">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{resDetail.firstName }} {{resDetail.lastName}}</mat-card-title>
+      <mat-card-subtitle>{{resDetail.phoneNumber}}</mat-card-subtitle>
+      <mat-card-subtitle>{{resDetail.email}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-list>
+        <mat-list-item>
+           <div matLine>
+             Address: <button mat-button>{{resDetail.address}}, {{resDetail.citystate}} {{resDetail.zip}}</button>
+           </div>
+        </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item>
+           <div matLine>
+                Type of room: <button mat-button>{{resDetail.catRates}}</button>
+           </div>
+        </mat-list-item>
+    </mat-list>
+
+    <mat-list>
+        <mat-list-item>
+           <div matLine>
+                Number of rooms: <button mat-button>{{resDetail.numRooms}}</button>
+           </div>
+        </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item>
+           <div matLine>
+                Number of nights:<button mat-button> {{resDetail.numNights}}</button>
+           </div>
+        </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item>
+           <div matLine>
+                Arrival Date: <button mat-button>{{resDetail.arrivalDate | date}}</button>
+           </div>
+        </mat-list-item>
+    </mat-list>
+  </mat-card>
+</div>

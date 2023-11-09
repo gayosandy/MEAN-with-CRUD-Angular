@@ -1,0 +1,11 @@
+.example-card {
+    max-width: 800px;
+    display: block;
+    margin: auto;
+    background-color: rgb(237, 236, 241);
+  }
+  
+  .example-header-image {
+    background-image: url('https://icones.pro/wp-content/uploads/2021/05/symbole-de-l-homme-violet.png');
+    background-size: cover;
+  }

@@ -1,0 +1,104 @@
+<div class="container" style="padding-top: 1%;">
+    <form [formGroup]="reservationForm" (ngSubmit)="submit()" [formGroup]="api.reservationForm" [class.submitted]="submitted">
+        <h1 class="text-muted" >Hotel Guest Registration Form</h1>
+        <div class="row">   
+          <h2 class="text-muted">Name</h2>
+            <div class="col-md-6">    
+                <mat-form-field appearance="outline"> 
+                <mat-label>First Name</mat-label>
+                    <input formControlName="firstName" matInput placeholder="First Name">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+            </div>  
+            <div class="col-md-6">    
+              <mat-form-field appearance="outline"> 
+              <mat-label>Last Name</mat-label>
+                  <input formControlName="lastName" matInput placeholder="Last Name">
+                  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+          </div>  
+          <div class="col-md-6">
+            <h2 class="text-muted">Phone Number</h2>
+            <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+                <input type="number" formControlName="phoneNumber" matInput placeholder="Phone Number or Mobile Number">
+                <mat-icon matSuffix>phone</mat-icon>
+              </mat-form-field>
+        </div>  
+        <div class="col-md-6">
+          <h2 class="text-muted">Email Address</h2>
+            <mat-form-field appearance="outline">
+                <mat-label>Email Address</mat-label>
+                <input formControlName="email" matInput placeholder="example@email.com">
+                <mat-icon matSuffix>alternate_email</mat-icon>
+              </mat-form-field>    
+        </div>  
+          <h2 class="text-muted">Address</h2>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Street Address</mat-label>
+                    <input formControlName="address" matInput placeholder="Address">
+                    <mat-icon matSuffix>location_on</mat-icon>
+                  </mat-form-field>
+            </div>  
+            <div class="col-md-3">
+              <mat-form-field appearance="outline">
+                  <mat-label>City and State</mat-label>
+                  <input formControlName="citystate" matInput placeholder="City and State">
+                  <mat-icon matSuffix>location_city</mat-icon>
+                </mat-form-field>
+          </div>  
+          <div class="col-md-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Postal / Zip Code</mat-label>
+                <input type="number" formControlName="zip" matInput placeholder="Postal / Zip Code">
+                <mat-icon matSuffix>home</mat-icon>
+              </mat-form-field>
+        </div>  
+            <h2 class="text-muted" >Accomodation</h2>
+            <div class="col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>Number of Nights</mat-label>
+                    <input formControlName="numNights" matInput placeholder="Number of Nights" type="number" min="1">
+                    <mat-icon matSuffix>today</mat-icon>
+                  </mat-form-field>
+            </div>  
+            <div class="col-md-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>Number of Rooms</mat-label>
+                    <input formControlName="numRooms" matInput placeholder="Number of Rooms" type="number" min="1">
+                    <mat-icon matSuffix>meeting_room</mat-icon>
+                  </mat-form-field>
+            </div>  
+            <div class="col-md-4">
+              <mat-form-field appearance="outline">
+                  <mat-label>Number of Guest</mat-label>
+                  <input formControlName="numGuest" matInput placeholder="Number of Guest" type="number">
+                  <mat-icon matSuffix>person_add</mat-icon>
+                </mat-form-field>
+          </div>  
+            <div class="col-md-6">
+                <mat-form-field>
+                    <mat-label>Room categories and rates</mat-label>
+                    <mat-select multiple formControlName="catRates">
+                      <mat-option *ngFor="let room of rooms" [value]="room">
+                        {{room}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <mat-label>Arrival Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="arrivalDate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker" ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+          </div>
+        </div>
+
+        <button mat-raised-button color="primary">{{ editMode ? 'Update' : 'Submit'}}</button>
+
+    </form>
+</div>
